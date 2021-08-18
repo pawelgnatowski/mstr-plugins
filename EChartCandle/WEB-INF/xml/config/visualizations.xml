@@ -1,0 +1,5 @@
+<visualizations>
+  <visualization-list name="ajax" show-in-web="true" view-mode="51">
+    <visualization attribute-minimum="1" desc="EChartCandle" drop-zones="plugins.EChartCandle.EChartCandleDropZones" editor-model="plugins.EChartCandle.EChartCandleEditorModel" is-mojo="true" metric-minimum="6" scope="19" style-name="EChartCandle" widget-type="7"/>
+  </visualization-list>
+</visualizations>
