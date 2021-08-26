@@ -1,1 +1,302 @@
-!function(e){var t={};function r(l){if(t[l])return t[l].exports;var o=t[l]={i:l,l:!1,exports:{}};return e[l].call(o.exports,o,o.exports,r),o.l=!0,o.exports}r.m=e,r.c=t,r.d=function(e,t,l){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:l})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var l=Object.create(null);if(r.r(l),Object.defineProperty(l,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)r.d(l,o,function(t){return e[t]}.bind(null,o));return l},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=505)}({505:function(e,t){mstrmojo.plugins.EChartCandle||(mstrmojo.plugins.EChartCandle={}),mstrmojo.requiresCls("mstrmojo.vi.models.editors.CustomVisEditorModel");var r=mstrmojo.vi.models.editors.CustomVisEditorModel.WIDGET_TYPE;mstrmojo.plugins.EChartCandle.EChartCandleEditorModel=mstrmojo.declare(mstrmojo.vi.models.editors.CustomVisEditorModel,null,{scriptClass:"mstrmojo.plugins.EChartCandle.EChartCandleEditorModel",cssClass:"echartcandle-editor-model",getCustomProperty:function(){return[{name:mstrmojo.desc("EChartCandle.1","Candle Configuration").replace(/^\[+|\]+$/g,""),value:[{style:r.EDITORGROUP,items:[{style:r.TWOCOLUMN,items:[{style:r.LABEL,name:"text",width:"45%",labelText:mstrmojo.desc("EChartCandle.2","Up Color").replace(/^\[+|\]+$/g,"")},{style:r.FILLGROUP,width:"55%",propertyName:"upcolor",items:[{childName:"fillAlpha",disabled:!0}]}]},{style:r.TWOCOLUMN,items:[{style:r.LABEL,name:"text",width:"45%",labelText:mstrmojo.desc("EChartCandle.3","Down Color").replace(/^\[+|\]+$/g,"")},{style:r.FILLGROUP,width:"55%",propertyName:"downcolor",items:[{childName:"fillAlpha",disabled:!0}]}]},{style:r.TWOCOLUMN,items:[{style:r.LABEL,width:"65%",labelText:mstrmojo.desc("EChartCandle.21","Candle Height(%)").replace(/^\[+|\]+$/g,"")},{style:r.STEPPER,propertyName:"candleheight",width:"35%",min:1,max:100}]},{style:r.LABEL,name:"MovAverageText",width:"100%",labelText:mstrmojo.desc("EChartCandle.19","Moving Average Name").replace(/^\[+|\]+$/g,"")},{style:r.TEXTBOX,width:"100%",propertyName:"matext"},{style:r.TWOCOLUMN,items:[{style:r.CHECKBOXANDLABEL,propertyName:"MA1",width:"65%",labelText:mstrmojo.desc("EChartCandle.4","Moving Average1").replace(/^\[+|\]+$/g,"")},{style:r.STEPPER,propertyName:"MA1V",width:"35%",min:1,max:360,disabled:"false"===this.getHost().getProperty("MA1")}]},{style:r.TWOCOLUMN,items:[{style:r.CHECKBOXANDLABEL,propertyName:"MA2",width:"65%",labelText:mstrmojo.desc("EChartCandle.6","Moving Average2").replace(/^\[+|\]+$/g,"")},{style:r.STEPPER,propertyName:"MA2V",width:"35%",min:1,max:360,disabled:"false"===this.getHost().getProperty("MA2")}]},{style:r.TWOCOLUMN,items:[{style:r.CHECKBOXANDLABEL,propertyName:"MA3",width:"65%",labelText:mstrmojo.desc("EChartCandle.7","Moving Average3").replace(/^\[+|\]+$/g,"")},{style:r.STEPPER,propertyName:"MA3V",width:"35%",min:1,max:360,disabled:"false"===this.getHost().getProperty("MA3")}]},{style:r.TWOCOLUMN,items:[{style:r.CHECKBOXANDLABEL,propertyName:"MA4",width:"65%",labelText:mstrmojo.desc("EChartCandle.8","Moving Average4").replace(/^\[+|\]+$/g,"")},{style:r.STEPPER,propertyName:"MA4V",width:"35%",min:1,max:360,disabled:"false"===this.getHost().getProperty("MA4")}]}]},{style:r.EDITORGROUP,items:[{style:r.LABEL,name:"text",width:"100%",labelText:mstrmojo.desc("EChartCandle.11","X Axis Format").replace(/^\[+|\]+$/g,"")},{style:r.CHECKBOXANDLABEL,propertyName:"xAxisLabel",labelText:mstrmojo.desc("EChartCandle.12","Show X Axis Label").replace(/^\[+|\]+$/g,"")},{style:r.CHARACTERGROUP,propertyName:"xAxisLabelFont",showFontStyle:!0,showFontSizeAndColor:!0,isFontSizeStepper:!0,disabled:"false"===this.getHost().getProperty("xAxisLabel")},{style:r.TWOCOLUMN,items:[{style:r.LABEL,name:"text",width:"25%",labelText:mstrmojo.desc("EChartCandle.17","Axis Border").replace(/^\[+|\]+$/g,"")},{style:r.LINEGROUP,width:"75%",propertyName:"xAxisBorder"}]},{style:r.TWOCOLUMN,items:[{style:r.LABEL,name:"text",width:"25%",labelText:mstrmojo.desc("EChartCandle.13","Grid Border").replace(/^\[+|\]+$/g,"")},{style:r.LINEGROUP,width:"75%",propertyName:"xBorder"}]},{style:r.TWOCOLUMN,items:[{style:r.LABEL,name:"text",width:"25%",labelText:mstrmojo.desc("EChartCandle.14","Banding").replace(/^\[+|\]+$/g,"")},{style:r.FILLGROUP,width:"65%",propertyName:"xBandingColor",items:[{childName:"fillAlpha",disabled:!1}]}]}]},{style:r.EDITORGROUP,items:[{style:r.LABEL,name:"text",width:"100%",labelText:mstrmojo.desc("EChartCandle.15","Y Axis Format").replace(/^\[+|\]+$/g,"")},{style:r.CHECKBOXANDLABEL,propertyName:"yAxisLabel",labelText:mstrmojo.desc("EChartCandle.16","Show Y Axis Label").replace(/^\[+|\]+$/g,"")},{style:r.CHARACTERGROUP,propertyName:"yAxisLabelFont",showFontStyle:!0,showFontSizeAndColor:!0,isFontSizeStepper:!0,disabled:"false"===this.getHost().getProperty("xAxisLabel")},{style:r.TWOCOLUMN,items:[{style:r.LABEL,name:"text",width:"25%",labelText:mstrmojo.desc("EChartCandle.17","Axis Border").replace(/^\[+|\]+$/g,"")},{style:r.LINEGROUP,width:"75%",propertyName:"yAxisBorder"}]},{style:r.TWOCOLUMN,items:[{style:r.LABEL,name:"text",width:"25%",labelText:mstrmojo.desc("EChartCandle.13","Grid Border").replace(/^\[+|\]+$/g,"")},{style:r.LINEGROUP,width:"75%",propertyName:"yBorder"}]},{style:r.TWOCOLUMN,items:[{style:r.LABEL,name:"text",width:"25%",labelText:mstrmojo.desc("EChartCandle.14","Banding").replace(/^\[+|\]+$/g,"")},{style:r.FILLGROUP,width:"65%",propertyName:"yBandingColor",items:[{childName:"fillAlpha",disabled:!1}]}]}]}]}]}})}});
+mstrmojo.requiresCls('mstrmojo.vi.models.editors.CustomVisEditorModel');
+
+const { WIDGET_TYPE: $WT } = mstrmojo.vi.models.editors.CustomVisEditorModel;
+
+mstrmojo.plugins.EChartCandle.EChartCandleEditorModel = mstrmojo.declare(
+  mstrmojo.vi.models.editors.CustomVisEditorModel,
+  null,
+  {
+    scriptClass: 'mstrmojo.plugins.EChartCandle.EChartCandleEditorModel',
+    cssClass: 'echartcandle-editor-model',
+    getCustomProperty() {
+      return [
+        {
+          name:  mstrmojo.desc("EChartCandle.1" ,"Candle Configuration").replace(/^\[+|\]+$/g , "")   ,
+          value: [
+            {
+              style: $WT.EDITORGROUP,
+              items: [
+                {
+                  style: $WT.TWOCOLUMN,
+                  items: [{
+                    style: $WT.LABEL,
+                    name: "text", 
+                    width: "45%",
+                    labelText: mstrmojo.desc("EChartCandle.2" ,"Up Color").replace(/^\[+|\]+$/g , "")
+                  }, {
+                    style: $WT.FILLGROUP,
+                    width: "55%",
+                    propertyName: "upcolor",
+                    items: [{                  
+                      childName: "fillAlpha",
+                      disabled: true
+                    }],                 
+                  }]
+                },                  
+                {
+                  style: $WT.TWOCOLUMN,
+                  items: [{
+                    style: $WT.LABEL,
+                    name: "text", 
+                    width: "45%",
+                    labelText: mstrmojo.desc("EChartCandle.3" ,"Down Color").replace(/^\[+|\]+$/g , "")
+                  }, {
+                    style: $WT.FILLGROUP,
+                    width: "55%",
+                    propertyName: "downcolor",
+                    items: [{
+                      childName: "fillAlpha",
+                      disabled: true
+                    }],                 
+                  }]
+                }, 
+                {
+                  style: $WT.TWOCOLUMN,
+                  items: [                
+                    {
+                    style: $WT.LABEL,
+                    width : "65%" , 
+                    labelText:  mstrmojo.desc("EChartCandle.21" ,"Candle Height(%)").replace(/^\[+|\]+$/g , ""), 
+                    }
+                  , {
+                    style: $WT.STEPPER,
+                    propertyName: 'candleheight',
+                    width: "35%",
+                    min : 1 , max : 100 
+                  }]
+                },
+               /*  {
+                  style: $WT.TWOCOLUMN,
+                  items: [{
+                    style: $WT.LABEL,
+                    name: "text", 
+                    width: "45%",
+                    labelText: mstrmojo.desc("EChartCandle.20" ,"Border").replace(/^\[+|\]+$/g , "")
+                  }, {
+                    style: $WT.FILLGROUP,
+                    width: "55%",
+                    propertyName: "bordercolor",
+                    items: [{
+                      childName: "fillAlpha",
+                      disabled: true
+                    }],                 
+                  }]
+                } ,  */
+                {
+                  style: $WT.LABEL,
+                  name: "MovAverageText" , 
+                  width: "100%",
+                  labelText: mstrmojo.desc("EChartCandle.19" ,"Moving Average Name").replace(/^\[+|\]+$/g , "") 
+                } ,
+                {
+                  style: $WT.TEXTBOX,
+                  width: "100%",
+                  propertyName: "matext",                  
+                } ,  
+                // Moving Average 1
+                {
+                  style: $WT.TWOCOLUMN,
+                  items: [                
+                    {
+                    style: $WT.CHECKBOXANDLABEL,
+                    propertyName: 'MA1',
+                    width : "65%" , 
+                    labelText: mstrmojo.desc("EChartCandle.4" ,"Moving Average1" ).replace(/^\[+|\]+$/g , "") , 
+                    }
+                  , {
+                    style: $WT.STEPPER,
+                    propertyName: 'MA1V',
+                    width: "35%",
+                    min : 1 , max : 360 , 
+                    disabled : this.getHost().getProperty('MA1') === "false" 
+                  }]
+                }, 
+                // Moving Average 2
+                
+                {
+                  style: $WT.TWOCOLUMN,
+                  items: [ {
+                    style: $WT.CHECKBOXANDLABEL,
+                    propertyName: 'MA2',  width : "65%" ,  
+                    labelText: mstrmojo.desc("EChartCandle.6" ,"Moving Average2" ).replace(/^\[+|\]+$/g , "")
+                  }  ,  {
+                    style: $WT.STEPPER,
+                    propertyName: 'MA2V',
+                    width: "35%",
+                    min : 1 , max : 360 , 
+                    disabled : this.getHost().getProperty('MA2') === "false" 
+                  }]
+                }, 
+                // Moving Average 3
+                
+                {
+                  style: $WT.TWOCOLUMN,
+                  items: [ {
+                    style: $WT.CHECKBOXANDLABEL,
+                    propertyName: 'MA3',width : "65%" , 
+                    labelText: mstrmojo.desc("EChartCandle.7" ,"Moving Average3" ).replace(/^\[+|\]+$/g , "")
+                  }  , {
+                    style: $WT.STEPPER,
+                    propertyName: 'MA3V',
+                    width: "35%",
+                    min : 1 , max : 360 , 
+                    disabled : this.getHost().getProperty('MA3') === "false" 
+                  }]
+                }, 
+                // Moving Average 4                
+                {
+                  style: $WT.TWOCOLUMN,
+                  items: [{
+                    style: $WT.CHECKBOXANDLABEL,
+                    propertyName: 'MA4', width : "65%" , 
+                    labelText: mstrmojo.desc("EChartCandle.8" ,"Moving Average4" ).replace(/^\[+|\]+$/g , "")
+                  }  ,   {
+                    style: $WT.STEPPER,
+                    propertyName: 'MA4V',
+                    width: "35%",
+                    min : 1 , max : 360 , 
+                    disabled : this.getHost().getProperty('MA4') === "false" 
+                  }]
+                },                                 
+              ],
+            },             
+            {   // Format  
+              style: $WT.EDITORGROUP,
+              items: [{
+                style: $WT.LABEL,
+                name: "text",
+                width: "100%",
+                labelText: mstrmojo.desc("EChartCandle.11" ,"X Axis Format").replace(/^\[+|\]+$/g , "")
+              }, 
+              {
+                style: $WT.CHECKBOXANDLABEL,
+                propertyName: 'xAxisLabel',
+                labelText: mstrmojo.desc("EChartCandle.12" ,"Show X Axis Label" ).replace(/^\[+|\]+$/g , "") , 
+              }, 
+              {
+                style: $WT.CHARACTERGROUP,
+                propertyName: 'xAxisLabelFont',
+                showFontStyle: true,
+                showFontSizeAndColor: true,
+                isFontSizeStepper: true, 
+                disabled : this.getHost().getProperty("xAxisLabel") === "false" 
+              } , 
+              {
+                style: $WT.TWOCOLUMN,
+                items: [{
+                  style: $WT.LABEL,
+                  name: "text",
+                  width: "25%",
+                  labelText:  mstrmojo.desc("EChartCandle.17" ,"Axis Border").replace(/^\[+|\]+$/g , "") 
+                }, {
+                  style: $WT.LINEGROUP,
+                  width: "75%",
+                  propertyName: "xAxisBorder"
+                }]
+              } , 
+              {
+                style: $WT.TWOCOLUMN,
+                items: [{
+                  style: $WT.LABEL,
+                  name: "text",
+                  width: "25%",
+                  labelText:  mstrmojo.desc("EChartCandle.13" ,"Grid Border").replace(/^\[+|\]+$/g , "") 
+                }, {
+                  style: $WT.LINEGROUP,
+                  width: "75%",
+                  propertyName: "xBorder"
+                }]
+              } , 
+              {
+                style: $WT.TWOCOLUMN,
+                items: [{
+                  style: $WT.LABEL,
+                  name: "text",
+                  width: "25%",
+                  labelText:  mstrmojo.desc("EChartCandle.14" ,"Banding").replace(/^\[+|\]+$/g , "")  
+                }, {
+                  style: $WT.FILLGROUP,
+                  width: "65%",
+                  propertyName: "xBandingColor",
+                  items: [{
+                    childName: "fillAlpha",
+                    disabled: false 
+                  }],
+                }]
+              } , 
+              ]
+            } , 
+            {   // Format  
+              style: $WT.EDITORGROUP,
+              items: [{
+                style: $WT.LABEL,
+                name: "text",
+                width: "100%",
+                labelText: mstrmojo.desc("EChartCandle.15" ,"Y Axis Format").replace(/^\[+|\]+$/g , "")
+              }, 
+              {
+                style: $WT.CHECKBOXANDLABEL,
+                propertyName: 'yAxisLabel',
+                labelText: mstrmojo.desc("EChartCandle.16" ,"Show Y Axis Label" ).replace(/^\[+|\]+$/g , "") , 
+              }, 
+              
+              {
+                style: $WT.CHARACTERGROUP,
+                propertyName: 'yAxisLabelFont',
+                showFontStyle: true,
+                showFontSizeAndColor: true,
+                isFontSizeStepper: true,
+                disabled : this.getHost().getProperty("xAxisLabel") === "false" 
+              } ,
+              {
+                style: $WT.TWOCOLUMN,
+                items: [{
+                  style: $WT.LABEL,
+                  name: "text",
+                  width: "25%",
+                  labelText:  mstrmojo.desc("EChartCandle.17" ,"Axis Border").replace(/^\[+|\]+$/g , "") 
+                }, {
+                  style: $WT.LINEGROUP,
+                  width: "75%",
+                  propertyName: "yAxisBorder"
+                }]
+              } , 
+              {
+                style: $WT.TWOCOLUMN,
+                items: [{
+                  style: $WT.LABEL,
+                  name: "text",
+                  width: "25%",
+                  labelText:  mstrmojo.desc("EChartCandle.13" ,"Grid Border").replace(/^\[+|\]+$/g , "") 
+                }, {
+                  style: $WT.LINEGROUP,
+                  width: "75%",
+                  propertyName: "yBorder"
+                }]
+              } , 
+              
+              {
+                style: $WT.TWOCOLUMN,
+                items: [{
+                  style: $WT.LABEL,
+                  name: "text",
+                  width: "25%",
+                  labelText:  mstrmojo.desc("EChartCandle.14" ,"Banding").replace(/^\[+|\]+$/g , "")  
+                }, {
+                  style: $WT.FILLGROUP,
+                  width: "65%",
+                  propertyName: "yBandingColor",
+                  items: [{
+                    childName: "fillAlpha",
+                    disabled: false 
+                  }],
+                }]
+              } , 
+              ]
+            } 
+          ],
+        },
+      ];
+    },
+  },
+);

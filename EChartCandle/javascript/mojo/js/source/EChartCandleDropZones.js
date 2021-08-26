@@ -1,1 +1,67 @@
-!function(e){var t={};function r(o){if(t[o])return t[o].exports;var a=t[o]={i:o,l:!1,exports:{}};return e[o].call(a.exports,a,a.exports,r),a.l=!0,a.exports}r.m=e,r.c=t,r.d=function(e,t,o){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(r.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)r.d(o,a,function(t){return e[t]}.bind(null,a));return o},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=504)}({504:function(e,t){mstrmojo.plugins.EChartCandle||(mstrmojo.plugins.EChartCandle={}),mstrmojo.requiresCls("mstrmojo.vi.models.CustomVisDropZones");var r=mstrmojo.vi.models.CustomVisDropZones.ENUM_ALLOW_DROP_TYPE;mstrmojo.plugins.EChartCandle.EChartCandleDropZones=mstrmojo.declare(mstrmojo.vi.models.CustomVisDropZones,null,{scriptClass:"mstrmojo.plugins.EChartCandle.EChartCandleDropZones",cssClass:"echartcandle-dropzones",getCustomDropZones:function(){return[{name:mstrmojo.desc("518","Attribute"),title:mstrmojo.desc("13828","Drag attributes here"),isColorBy:!0,allowObjectType:r.ATTRIBUTE},{name:mstrmojo.desc("EChartCandle.201","Open").replace(/^\[+|\]+$/g,""),title:"Drag metrics here",maxCapacity:1,allowObjectType:r.METRIC},{name:mstrmojo.desc("EChartCandle.202","Close").replace(/^\[+|\]+$/g,""),title:"Drag metrics here",maxCapacity:1,allowObjectType:r.METRIC},{name:mstrmojo.desc("EChartCandle.203","Lowest").replace(/^\[+|\]+$/g,""),title:"Drag metrics here",maxCapacity:1,allowObjectType:r.METRIC},{name:mstrmojo.desc("EChartCandle.204","Highest").replace(/^\[+|\]+$/g,""),title:"Drag metrics here",maxCapacity:1,allowObjectType:r.METRIC},{name:mstrmojo.desc("EChartCandle.205","Volume").replace(/^\[+|\]+$/g,""),title:"Drag metrics here",maxCapacity:1,allowObjectType:r.METRIC},{name:mstrmojo.desc("EChartCandle.206","Amount").replace(/^\[+|\]+$/g,""),title:"Drag metrics here",maxCapacity:1,allowObjectType:r.METRIC}]}})}});
+mstrmojo.requiresCls('mstrmojo.vi.models.CustomVisDropZones');
+
+/**
+ * @enum {number} ENUM_ALLOW_DROP_TYPE - { ATTRIBUTE, METRIC, ATTRIBUTE_AND_METRIC, ATTRIBUTE_OR_METRIC }
+ */
+const { ENUM_ALLOW_DROP_TYPE } = mstrmojo.vi.models.CustomVisDropZones;
+
+// dropzone name list
+const ATTRIBUTE = 'Attribute';
+const METRIC = 'Metric';
+const TOOLTIP = 'Tooltip';
+
+mstrmojo.plugins.EChartCandle.EChartCandleDropZones = mstrmojo.declare(
+  mstrmojo.vi.models.CustomVisDropZones,
+  null,
+  {
+    scriptClass: 'mstrmojo.plugins.EChartCandle.EChartCandleDropZones',
+    cssClass: 'echartcandle-dropzones',
+    getCustomDropZones() {
+      return [
+        {
+          name: mstrmojo.desc('518', 'Attribute') ,
+          title: mstrmojo.desc('13828','Drag attributes here')  ,
+          // maxCapacity: 1,
+          isColorBy: true , 
+          allowObjectType: ENUM_ALLOW_DROP_TYPE.ATTRIBUTE,
+        },
+        {
+          name: mstrmojo.desc("EChartCandle.201" ,"Open").replace(/^\[+|\]+$/g , "")  ,
+          title: 'Drag metrics here',
+          maxCapacity: 1,
+          allowObjectType: ENUM_ALLOW_DROP_TYPE.METRIC,
+        },
+        {
+          name: mstrmojo.desc("EChartCandle.202" ,"Close").replace(/^\[+|\]+$/g , "")  ,
+          title: 'Drag metrics here',
+          maxCapacity: 1,
+          allowObjectType: ENUM_ALLOW_DROP_TYPE.METRIC,
+        },
+        {
+          name: mstrmojo.desc("EChartCandle.203" ,"Lowest").replace(/^\[+|\]+$/g , "")  ,
+          title: 'Drag metrics here',
+          maxCapacity: 1,
+          allowObjectType: ENUM_ALLOW_DROP_TYPE.METRIC,
+        },
+        {
+          name:mstrmojo.desc("EChartCandle.204" ,"Highest").replace(/^\[+|\]+$/g , "")  ,
+          title: 'Drag metrics here',
+          maxCapacity: 1,
+          allowObjectType: ENUM_ALLOW_DROP_TYPE.METRIC,
+        },
+        {
+          name:mstrmojo.desc("EChartCandle.205" ,"Volume").replace(/^\[+|\]+$/g , "")  ,
+          title: 'Drag metrics here',
+          maxCapacity: 1,
+          allowObjectType: ENUM_ALLOW_DROP_TYPE.METRIC,
+        } , 
+        {
+          name:mstrmojo.desc("EChartCandle.206" ,"Amount").replace(/^\[+|\]+$/g , "")  ,
+          title: 'Drag metrics here',
+          maxCapacity: 1,
+          allowObjectType: ENUM_ALLOW_DROP_TYPE.METRIC,
+        }
+      ];
+    },
+  },
+);
